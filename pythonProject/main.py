@@ -13,7 +13,7 @@ timer = pygame.time.Clock()
 fps = 60
 font = pygame.font.Font('freesansbold.ttf', 20)
 level = copy.deepcopy(boards)
-color = 'blue'
+color = 'red'
 PI = math.pi
 player_images = []
 for i in range(1, 5):
@@ -700,9 +700,9 @@ def draw_board():
     for i in range(len(level)):
         for j in range(len(level[i])):
             if level[i][j] == 1:
-                pygame.draw.circle(screen, 'white', (j * num2 + (0.5 * num2), i * num1 + (0.5 * num1)), 4)
+                pygame.draw.circle(screen, 'purple', (j * num2 + (0.5 * num2), i * num1 + (0.5 * num1)), 4)
             if level[i][j] == 2 and not flicker:
-                pygame.draw.circle(screen, 'white', (j * num2 + (0.5 * num2), i * num1 + (0.5 * num1)), 10)
+                pygame.draw.circle(screen, 'purple', (j * num2 + (0.5 * num2), i * num1 + (0.5 * num1)), 10)
             if level[i][j] == 3:
                 pygame.draw.line(screen, color, (j * num2 + (0.5 * num2), i * num1),
                                  (j * num2 + (0.5 * num2), i * num1 + num1), 3)
